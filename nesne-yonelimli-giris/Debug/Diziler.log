@@ -1,0 +1,3 @@
+﻿  Diziler.cpp
+C:\Users\merbe\source\repos\BTK\Diziler\Diziler.cpp(20,8): error C2660: 'test': işlev 1 bağımsız değişken almıyor
+C:\Users\merbe\source\repos\BTK\Diziler\Diziler.cpp(7,6): message : 'test' bildirimine bakın
