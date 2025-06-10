@@ -1,216 +1,75 @@
 ﻿#include <iostream>
- 
-class Payment {
-	private:
-		float tutar=0;
-	public:
-		std::string paraBirimi;
+using namespace std;
 
-		void setTutar(float t) {
-			if (t > 0) {
-				tutar = t;
-			}
-			else {
-				tutar = 0.1;
-			}
+// Araba adında bir sınıf oluşturuluyor
+class Araba {
+private:
+    string marka;
+    int hiz;
 
-		}
+public:
+    // Arabanın markasını ayarlayan metot
+    void setMarka(string m) {
+        marka = m;
+    }
 
-		void pay() {
-			std::cout << tutar << ":Odeme alindi";
-		} 
+    // Arabanın hızını ayarlayan metot
+    void setHiz(int h) {
+        if (h >= 0) {
+            hiz = h;
+        } else {
+            hiz = 0; // negatif hız olmasın diye önlem
+        }
+    }
 
-		friend class Test;
+    // Marka ve hızı ekrana yazdıran metot
+    void bilgileriGoster() {
+        cout << "Araba markasi: " << marka << endl;
+        cout << "Hizi: " << hiz << " km/s" << endl;
+    }
+
+    // Arabayı çalıştıran metot
+    void calistir() {
+        cout << marka << " calisiyor... Vroom vroom!" << endl;
+    }
+
+    // Arabayı durduran metot
+    void durdur() {
+        cout << marka << " durdu." << endl;
+    }
+    
+    Araba(bool f,std::string a){
+        marka ="bmw";
+        std::cout <<a; 
+        std::cout <<f; 
+    }
+      Araba(bool f){
+        marka ="bmw";
+        std::cout <<f;
+          
+    }
+    Araba(){
+
+    }
+    ~Araba(){
+        std::cout<<"odeme alindi";
+    }
+     
+
 };
 
+int main() {
+    // Bir Araba nesnesi oluşturuluyor
+    Araba araba1(true);
+    
 
-class Test {
-	public:
-		void degistir(Payment* payment) {
-			payment->tutar = - 10;
-		}
-};
+    // Nesneye ait özellikler ve metotlar kullanılıyor
+    araba1.setMarka("Honda");
+    araba1.setHiz(120);
 
- 
-int main() { 
-	Payment payment;
+    araba1.calistir();
+    araba1.bilgileriGoster();
+    araba1.durdur();
 
-	Test test;
-	test.degistir(&payment);
-	
-	payment.paraBirimi = "tl";
-	payment.pay();
+    return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-* 
-* class Payment { 	
-	private:
-		float tutar;
-	public:  
-		std::string paraBirimi;
-
-		void setTutar(float t) {
-			if (t>0) {
-				tutar = t;
-			}
-			else {
-				tutar = 0.1;
-			}
-			
-		}
-		 
-		void pay() {
-			std::cout<< tutar << ":Odeme alindi";
-		}
-};
-
-* 
-* class Silah { 
-	public:
-		std::string isim;
-		int mermiKapasitesi;
-		std::string renk; 
-};
- 
-class Ak47 : public Silah {
-	public:  
-		bool seriTek;
-		int kayisUzunlugu;
-		bool durbun; 
-		 
-		void atesEt() {
-	 
-		}
-};
-
-class Pistol : public Silah {
-	public: 
-		int kurmaKoluDeseni;
-
-		void atesEt() {
-		 
-		}
-};
-
-class M1 : public Silah {
-	public: 
-		bool seriTek;
-		int kayisUzunlugu;
-		int kurmaPozisyonu;
-
-		void atesEt() {
-	 
-		}
-};
-
-class Hesapla{ 
-
-	public:
-		int genislik;
-		int yukseklik;
-		int alan;
-
-		void giris() {
-			std::cout << "Yukselik gir"<<std::endl;
-			std::cin >> yukseklik;
-
-			std::cout << "Genislik gir" << std::endl;
-			std::cin >> genislik;
-		}
-
-		void hesapla(){
-			alan = yukseklik * genislik;
-			std::cout << alan;
-		}
-
-};
-
-
-
-int main()
-{
-
-	Hesapla hesap;
-	hesap.giris();
-	hesap.hesapla();
-	 
-}
- */
-  
-
-
- //class Silah {
- //	public:
- //		std::string isim;
- //		int mermiKapasitesi;
- //		std::string renk; 
- //
- //		void ates() {
- //			std::cout << "pis pis"; //100
- //		}
- //};
- //
- //class Ak47 : public Silah {
- //	public:
- //		bool seriTek;
- //		int kayisUzunlugu;
- //		bool durbun; 
- //
- //		void ates() {
- //			Silah::ates(); 
- //			std::cout << "bom bom";
- //		}
- //};
- //
- //class Pistol : public Silah {
- //	public:
- //		int kurmaKoluDeseni;
- //
- //		void ates() {
- //			std::cout << "bam bam";
- //		}
- //};
- //
- //class M1 : public Silah {
- //	public:
- //		bool seriTek;
- //		int kayisUzunlugu;
- //		int kurmaPozisyonu;
- //
- //		void ates() {
- //			std::cout << "bum bum";
- //		}
- //};
- // 
- //
- //void atesEt(Silah* silahPtr) {
- //	silahPtr->ates();
- //}
- //  
