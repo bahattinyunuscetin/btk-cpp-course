@@ -1,0 +1,3 @@
+﻿  AkisKontrolleri.cpp
+C:\Users\merbe\source\repos\BTK\AkisKontrolleri\AkisKontrolleri.cpp(39,46): warning C4101: 'e': yerel değişken başvurusu kaldırıldı
+  AkisKontrolleri.vcxproj -> C:\Users\merbe\source\repos\BTK\Debug\AkisKontrolleri.exe

@@ -1,0 +1,3 @@
+﻿  Siniflar.cpp
+C:\Users\merbe\source\repos\BTK\Siniflar\Siniflar.cpp(14,1): warning C4305: '=': 'double' iken 'float' olarak kesildi
+  Siniflar.vcxproj -> C:\Users\merbe\source\repos\BTK\Debug\Siniflar.exe

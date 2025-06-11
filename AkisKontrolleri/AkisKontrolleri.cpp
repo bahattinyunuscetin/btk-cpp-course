@@ -22,19 +22,22 @@ int main()
         if(islem=='e'){
             continue;
         }
+          if(islem=='s'){
+            goto stop;
+        }
                     
         switch (islem) {
             case '+':
-                std::cout << "Sonuc:" << a + b;
+                std::cout << "Sonuc:" << a + b<< std::endl;
                 break;
             case '-':
-                std::cout << "Sonuc:" << a - b;
+                std::cout << "Sonuc:" << a - b<< std::endl;
                 break;
             case '*':
-                std::cout << "Sonuc:" << a * b;
+                std::cout << "Sonuc:" << a * b<< std::endl;
                 break;
             case '/':
-                std::cout << "Sonuc:" << a / b;
+                std::cout << "Sonuc:" << a / b<< std::endl;
                 break;
             default:
                 std::cout << "Bilinmeyen islem";
@@ -42,7 +45,10 @@ int main()
         }
 
     }
+   std::cout<<"devam";
  
+   stop:
+   std::cout<<"durdu";
 
  
 

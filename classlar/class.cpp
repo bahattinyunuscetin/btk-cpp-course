@@ -30,7 +30,7 @@ public:
 
     // Arabayı çalıştıran metot
     void calistir() {
-        cout << marka << " calisiyor... Vroom vroom!" << endl;
+        cout << marka << " calisiyor... " << endl;
     }
 
     // Arabayı durduran metot

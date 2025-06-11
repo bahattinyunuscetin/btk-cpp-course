@@ -78,23 +78,6 @@ int main(){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // // test fonksiyonunun TANIMI
 // void test(Ak47& ak47, Ak47* ak47ptr) {
 // 	std::cout << "test fonksiyonu çalıştı\n";
