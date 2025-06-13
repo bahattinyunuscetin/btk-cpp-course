@@ -9,6 +9,10 @@ class Kitap {
        Kitap(){
         adet++;
        }
+
+       static int get(){
+        return adet;
+       }
 };
 int Kitap::adet = 0;
 
@@ -18,16 +22,26 @@ int Kitap::adet = 0;
 //     std::cout<< a <<std::endl;
 // }
 
+void test(){
+    static Kitap kitap;
+}
 
 int main(){
-    Kitap kitap;
-    Kitap kitap1;
-    Kitap kitap2;
-    Kitap kitap3;
-    Kitap kitap4;
+    // Kitap kitap;
+    // Kitap kitap1;
+    // Kitap kitap2;
+    // Kitap kitap3;
+    // Kitap kitap4;
     
-    std::cout<< Kitap::adet;
+    // std::cout<< Kitap::adet;
 
     // test();
     // test(); 
+
+
+    test();
+
+    std::cout<< Kitap::get();
+
+
 }
