@@ -1,6 +1,6 @@
 #include "Kutuphane.h"
 
-Mat::Mat(int a,int b) : a(a),b(b) {}
+Mat::Mat(int a,int b) : a(a),b(b) {}  // dışardan gelen a ve b yi sınıfın içindeki a ve b ye atama işlemi 
 
 int Mat::topla() {
 	return this->a + this->b;

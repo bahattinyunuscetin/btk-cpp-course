@@ -1,5 +1,6 @@
 ﻿#include <iostream>
 #include "Kutuphane.h"
+#include "test.h"
  
 int main()
 {
