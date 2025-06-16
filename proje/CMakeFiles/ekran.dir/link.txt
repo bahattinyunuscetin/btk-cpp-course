@@ -1,0 +1,3 @@
+E:\derleyiciler\cmake3.23.0\bin\cmake.exe -E rm -f CMakeFiles\ekran.dir/objects.a
+E:\derleyiciler\mingw8.1\bin\ar.exe qc CMakeFiles\ekran.dir/objects.a @CMakeFiles\ekran.dir\objects1.rsp
+E:\derleyiciler\mingw8.1\bin\x86_64-w64-mingw32-g++.exe -O3 -DNDEBUG -Wl,--whole-archive CMakeFiles\ekran.dir/objects.a -Wl,--no-whole-archive -o ekran.exe -Wl,--out-implib,libekran.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\ekran.dir\linklibs.rsp

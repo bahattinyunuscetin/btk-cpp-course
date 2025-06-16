@@ -3,6 +3,7 @@
 int main()
 { 
 
+      //  c = (a > b) ? a : b    Eğer a, b’den büyükse c = a olsun, değilse c = b olsun.
 
     int a = 0;
     int b = 0;
@@ -54,3 +55,5 @@ int main()
 
      
 }
+
+

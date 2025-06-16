@@ -1,0 +1,48 @@
+cmake_minimum_required(VERSION 3.23) // gerekli olan minimum cmake versiyonu
+
+set(CMAKE_CXX_STANDARD 11) // hangi standart kullanılacak
+set(CMAKE_CXX_STANDARD_REQUIRED ON) // bu standart yoksa bir önceki kullanılsın mı ? ON ise hayır demektir
+set(CMAKE_GENERATOR "MinGW Makefiles")// makefile oluştur  
+
+project(PROJEISMI VERSION 1.0) // projenize bir isim verin
+
+add_executable(out main.cpp) // çalıştırılabilir dosyanızın adını ve kaynağını bildirin
+
+
+add_subdirectory(FolderName) // bu dizinden çalışmaya devam et
+
+
+add_library(${PROJECT_NAME} SHARED ${PROJECT_SOURCE_DIR}/ornek.cpp) // kütüphane ekle
+target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/include) // include yolu
+target_link_libraries(${PROJECT_NAME} PRIVATE LIBNAME) // projeye bir ktüphaneyi bağla
+
+
+cmake -S . -B build -G "MinGW Makefiles"  
+cmake -S . -B build -G "Unix Makefiles"
+cmake -S . -B build -G "Visual Studio 16 2019" 
+
+
+## wxwidgets
+cmake_minimum_required(VERSION 3.0.0)
+project(test VERSION 0.1.0)
+ 
+set(wxWidgets_ROOT_DIR C:/Users/merbe/Desktop/test2/wxWidgets)
+find_package(wxWidgets REQUIRED gl core base)
+ 
+add_executable(test main.cpp)
+ 
+ 
+if(wxWidgets_FOUND)
+     include(${wxWidgets_USE_FILE})
+     target_include_directories(test PUBLIC ${wxWidgets_INCLUDE_DIRS})
+     target_compile_definitions(test PUBLIC ${wxWidgets_DEFINITIONS})
+     target_compile_options(test PRIVATE ${wxWidgets_CXX_FLAGS})
+     target_link_libraries(test ${wxWidgets_LIBRARIES}) 
+else()
+     message("wx bulunamadı")
+endif()
+
+
+mingw32-make.exe -f makefile.gcc SHARED=0 UNICCODE=1 BUILD=release
+
+https://wiki.wxwidgets.org/WxWidgets_Build_Configurations

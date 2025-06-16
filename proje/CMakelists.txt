@@ -1,0 +1,23 @@
+cmake_minimum_required(VERSION 3.23)
+set(CMAKE_CXX_STANDARD 11) # hangi standart kullanılacak
+set(CMAKE_CXX_STANDARD_REQUIRED ON) # bu standart yoksa bir önceki kullanılsın mı ? ON ise hayır demektir
+
+project(EKRAN VERSION 1.0)
+
+set(wxWidgets_ROOT_DIR C:\github repolarım\btk-c++\proje\WXvidgets)
+find_package(wxWidgets REQUIRED gl core base)
+
+set (CMAKE_CXX_STANDARD 11)
+SET(CMAKE_CXX_STANDART_REQUIRED ON)
+
+add_executable(EKRAN main.cpp)
+
+if(wxWidgets_FOUND)
+     include(${wxWidgets_USE_FILE})
+     target_include_directories(EKRAN PUBLIC ${wxWidgets_INCLUDE_DIRS})
+     target_compile_definitions(EKRAN PUBLIC ${wxWidgets_DEFINITIONS})
+     target_compile_options(EKRAN PRIVATE ${wxWidgets_CXX_FLAGS})
+     target_link_libraries(EKRAN ${wxWidgets_LIBRARIES}) 
+else()
+     message("wx bulunamadı")
+endif() 

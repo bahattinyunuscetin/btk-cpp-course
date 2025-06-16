@@ -1,0 +1,59 @@
+cmake_minimum_required(VERSION 3.23)
+
+set(CMAKE_CXX_STANDARD 11) #hangi standart kullanılacak
+set(CMAKE_CXX_STANDARD_REQUIRED ON) # bu standart yoksa bir önceki kullanılsın mı ? ON ise hayır demektir
+
+project(ekran VERSION 1.0) 
+
+set(PROJECT_DIR ${CMAKE_SOURCE_DIR})
+set(PROJECT_SOURCE_DIR ${PROJECT_DIR}/src)
+set(PROJECT_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/include)
+set(PROJECT_LIB_DIR ${PROJECT_SOURCE_DIR}/lib)
+
+set(
+     PROJECT_HEADERS 
+     ${PROJECT_INCLUDE_DIR}/MyApp.hpp
+     ${PROJECT_INCLUDE_DIR}/MyFrame.hpp
+)
+set(
+     PROJECT_SOURCES 
+     ${PROJECT_SOURCE_DIR}/main.cpp
+     ${PROJECT_SOURCE_DIR}/MyApp.cpp
+     ${PROJECT_SOURCE_DIR}/MyFrame.cpp
+)
+
+set(wxWidgets_ROOT_DIR ${PROJECT_LIB_DIR}/wxWidgets)
+find_package(wxWidgets REQUIRED gl core base)
+
+#ffmpeg
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} E:/derleyiciler/vcpkg/installed/x86-windows/share/ffmpeg E:/derleyiciler/vcpkg/installed/x86-windows/share/opencv)
+set(OpenCV_DIR E:/derleyiciler/vcpkg/installed/x86-windows/share/opencv)
+include(E:/derleyiciler/vcpkg/scripts/buildsystems/vcpkg.cmake)
+find_package(FFmpeg REQUIRED)
+
+#opencv 
+find_package(OpenCV REQUIRED)
+
+
+add_executable(${PROJECT_NAME} ${PROJECT_SOURCES})
+
+target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_INCLUDE_DIR})
+ 
+if(wxWidgets_FOUND)
+     include(${wxWidgets_USE_FILE})
+     target_include_directories(${PROJECT_NAME} PUBLIC ${wxWidgets_INCLUDE_DIRS})
+     target_compile_definitions(${PROJECT_NAME} PUBLIC ${wxWidgets_DEFINITIONS})
+     target_compile_options(${PROJECT_NAME} PRIVATE ${wxWidgets_CXX_FLAGS})
+     target_link_libraries(${PROJECT_NAME} ${wxWidgets_LIBRARIES}) 
+else()
+     message("wx bulunamadı")
+endif()
+
+
+#ffmpeg include
+include_directories(${FFMPEG_INCLUDE_DIRS})
+target_link_libraries(${PROJECT_NAME} ${FFMPEG_LIBRARIES})
+
+#opencv
+include_directories(${OpenCV_INCLUDE_DIRS})
+target_link_libraries(${PROJECT_NAME} ${OpenCV_LIBS})

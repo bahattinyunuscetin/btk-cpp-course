@@ -1,0 +1,17 @@
+[
+{
+  "directory": "C:/Users/merbe/Desktop/proje/build",
+  "command": "E:\\derleyiciler\\mingw8.1\\bin\\x86_64-w64-mingw32-g++.exe -DUNICODE -D_UNICODE @CMakeFiles/ekran.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++11 -o CMakeFiles\\ekran.dir\\src\\main.cpp.obj -c C:\\Users\\merbe\\Desktop\\proje\\src\\main.cpp",
+  "file": "C:/Users/merbe/Desktop/proje/src/main.cpp"
+},
+{
+  "directory": "C:/Users/merbe/Desktop/proje/build",
+  "command": "E:\\derleyiciler\\mingw8.1\\bin\\x86_64-w64-mingw32-g++.exe -DUNICODE -D_UNICODE @CMakeFiles/ekran.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++11 -o CMakeFiles\\ekran.dir\\src\\MyApp.cpp.obj -c C:\\Users\\merbe\\Desktop\\proje\\src\\MyApp.cpp",
+  "file": "C:/Users/merbe/Desktop/proje/src/MyApp.cpp"
+},
+{
+  "directory": "C:/Users/merbe/Desktop/proje/build",
+  "command": "E:\\derleyiciler\\mingw8.1\\bin\\x86_64-w64-mingw32-g++.exe -DUNICODE -D_UNICODE @CMakeFiles/ekran.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++11 -o CMakeFiles\\ekran.dir\\src\\MyFrame.cpp.obj -c C:\\Users\\merbe\\Desktop\\proje\\src\\MyFrame.cpp",
+  "file": "C:/Users/merbe/Desktop/proje/src/MyFrame.cpp"
+}
+]
