@@ -132,9 +132,9 @@ Bu repo, kodu sadece yazma değil, **anlama yolculuğuna** da destek vermek içi
 
 Her türlü soru, öneri ya da kod sohbeti için bana ulaşabilirsin:
 
-* 📧 **E-posta:** [codewithyunus@example.com](mailto:codewithyunus@example.com)
+* 📧 **E-posta:** [bahattinyunuscetin@hotmail.com](bahattinyunuscetin@hotmail.com)
 * 🧠 **GitHub:** [@bahattinyunuscetin](https://github.com/bahattinyunuscetin)
-* 📸 **Instagram:** [@codewithyunus](https://instagram.com/codewithyunus)
+* 📸 **Instagram:** [@bahattinyunus](https://instagram.com/bahattinyunus)
 
 ---
 
