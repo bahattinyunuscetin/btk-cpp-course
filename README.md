@@ -298,15 +298,6 @@ Bu repo, kodu sadece yazma değil, **anlama yolculuğuna** da destek vermek içi
 
 ---
 
-## 📞 İletişim
-
-Her türlü soru, öneri ya da kod sohbeti için bana ulaşabilirsin:
-
-* 📧 **E-posta:** [codewithyunus@example.com](mailto:codewithyunus@example.com)
-* 🧠 **GitHub:** [@bahattinyunuscetin](https://github.com/bahattinyunuscetin)
-* 📸 **Instagram:** [@codewithyunus](https://instagram.com/codewithyunus)
-
----
 
 ## 🧠 Kapanış Notu
 
@@ -314,7 +305,7 @@ Her türlü soru, öneri ya da kod sohbeti için bana ulaşabilirsin:
 > — **Bjarne Stroustrup**
 
 Kodla kal, üretmekten korkma 🚀
-— **Bahattin Yunus Çetin**
+
 
 ---
 
