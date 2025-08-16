@@ -1,0 +1,71 @@
+# Build directories
+Debug/
+Release/
+build/
+CMakeFiles/
+CMakeTmp/
+.cmake/
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Object files
+*.o
+*.obj
+
+# Library files
+*.lib
+*.a
+*.so
+*.dll
+*.dylib
+
+# Visual Studio files
+*.vcxproj.user
+*.sln.docstates
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+*.pdb
+*.pgc
+*.pgd
+.vs/
+
+# CMake generated files
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+*.cmake
+
+# IDE files
+.vscode/settings.json
+.vscode/launch.json
+.vscode/tasks.json
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# wxWidgets specific
+WXvidgets/
+
+# Empty files
+g++
